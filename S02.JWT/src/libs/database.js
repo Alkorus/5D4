@@ -3,6 +3,7 @@ import chalk from 'chalk';
 
 export default () => {
 
+    //console.log(process);
     const url = process.env.DATABASE;
     console.log(chalk.green(`[MONGO] - Establish new connection with url: ${url}`));
     mongoose.set('useNewUrlParser', true);

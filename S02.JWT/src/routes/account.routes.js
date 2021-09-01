@@ -16,7 +16,15 @@ class AccountRoutes {
     }
 
     async post(req, res, next) {
-       
+       try {
+            // TODO: Il faudrait valider les informations avant de l'ajouter dans la BD (express-validator)
+            let account = await accountRepository.create(req.body);
+            account = account.toObject({getters:false, vitrtuals:false});
+            account = accountRepository.transform(account);
+            res.status(201).json(account);
+       } catch (err) {
+           return next(httpErrors.InternalServerError(err));
+       }
     }
 
     secure(req, res, next) {
@@ -24,7 +32,15 @@ class AccountRoutes {
     }
 
     async login(req, res, next) {
-       
+        const {username, password} = req.body;
+        
+        const result = await accountRepository.login(username, password);
+
+        if (result.account) {
+            res.status(200).end();
+        } else {
+            return next(result.err);
+        }
     }
 
     async refreshToken(req, res, next) {

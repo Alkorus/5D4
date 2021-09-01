@@ -1,8 +1,7 @@
+import './.env.js';
 import chalk from 'chalk';
-import dotenv from 'dotenv-flow'
 import app from './src/app.js';
 
-dotenv.config({ silent: true });
 
 const PORT = process.env.PORT;
 
