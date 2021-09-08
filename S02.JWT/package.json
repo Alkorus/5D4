@@ -35,7 +35,13 @@
     "cors": "^2.8.5",
     "dayjs": "^1.10.6",
     "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "express-rate-limit": "^5.3.0",
+    "express-slow-down": "^1.4.0",
     "http-errors": "^1.8.0",
-    "mongoose": "^5.13.8"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.8",
+    "qrcode": "^1.4.4",
+    "random": "^3.0.6"
   }
 }
