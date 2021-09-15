@@ -1,0 +1,51 @@
+{
+  "name": "node-cstj-template",
+  "version": "1.0.0",
+  "description": "Modèle de projet pour des serveurs node.js au CSTJ",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon server.js --inspect"
+  },
+  "nodemonConfig": {
+    "ignore": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yannickcharron/node-cstj-template.git"
+  },
+  "keywords": [
+    "node.js",
+    "cstj"
+  ],
+  "author": "Yannick Charron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yannickcharron/node-cstj-template/issues"
+  },
+  "homepage": "https://github.com/yannickcharron/node-cstj-template#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^3.2.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.1.0",
+    "@graphql-tools/load": "^7.3.0",
+    "@graphql-tools/schema": "^8.2.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.6",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "express-jwt": "^6.1.0",
+    "express-rate-limit": "^5.3.0",
+    "express-slow-down": "^1.4.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.8",
+    "qrcode": "^1.4.4",
+    "random": "^3.0.6"
+  }
+}

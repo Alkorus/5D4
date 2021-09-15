@@ -1,0 +1,32 @@
+type Query {
+    tweets: [Tweet]
+    account(id:ID!): Account
+}
+
+type Mutation {
+    createTweet(body:String):Tweet
+    likeTweet(id:ID!):Tweet
+}
+
+type Tweet {
+    id: ID!
+    body: String!
+    tweetDate: String!
+    author: Account!
+    stats: Stat
+}
+
+type Account {
+    displayName: String!
+    fourDigits: Int!
+    email: String!
+    firstname: String!
+    lastname: String!
+    tweets: [Tweet]
+}
+
+type Stat {
+    views: Int
+    likes: Int
+    retweets: Int
+}
