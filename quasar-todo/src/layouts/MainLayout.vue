@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"/>
 
         <div class="q-px-lg q-pt-xl q-mb-md">
-          <div class="text-h3">Tâches</div>  
+          <div class="text-h3">{{$t('tasks', 'fr-CA')}}</div>  
           <div class="text-subtitle1">{{ todayDate }}</div>
         </div> 
 
@@ -41,6 +41,30 @@
             </q-item-section>
             <q-item-section>
               Tâches
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/planets"
+            exact
+            clickable
+            v-ripple>
+            <q-item-section avatar>
+              <q-icon name="travel_explore"/>
+            </q-item-section>
+            <q-item-section>
+              Planètes
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/help"
+            exact
+            clickable
+            v-ripple>
+            <q-item-section avatar>
+              <q-icon name="help"/>
+            </q-item-section>
+            <q-item-section>
+              Aide
             </q-item-section>
           </q-item>
         </q-list>

@@ -3,5 +3,9 @@
   "vetur.format.enable": false,
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   
-  "vetur.experimental.templateInterpolationService": true
+  "vetur.experimental.templateInterpolationService": true,
+  "i18n-ally.enabledParsers": ["js"],
+  "i18n-ally.localesPaths": [
+    "src/i18n"
+  ]
 }
